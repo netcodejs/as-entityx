@@ -1,0 +1,26 @@
+{
+  "name": "as-entityx",
+  "version": "1.0.0",
+  "description": "Networking ecs framework.",
+  "main": "index.js",
+  "scripts": {
+    "t": "yarn asbuild:untouched && yarn test",
+    "test": "node --experimental-wasi-unstable-preview1 tests",
+    "asbuild:untouched": "asc assembly/index.ts --transform ./transform/unique-id.ts,./transform/unique-id-of.ts --target debug",
+    "asbuild:optimized": "asc assembly/index.ts --target release",
+    "asbuild": "yarn asbuild:untouched && yarn asbuild:optimized"
+  },
+  "author": "LittleMoi",
+  "license": "ISC",
+  "dependencies": {
+    "@assemblyscript/loader": "^0.19.2"
+  },
+  "devDependencies": {
+    "assemblyscript": "^0.19.2",
+    "prettier": "^2.3.1",
+    "ts-mixer": "^5.4.1",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.2",
+    "visitor-as": "^0.6.0"
+  }
+}
