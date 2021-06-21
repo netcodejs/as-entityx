@@ -7,6 +7,14 @@
   resolved "https://registry.yarnpkg.com/@assemblyscript/loader/-/loader-0.19.3.tgz#54fff5664f67c899237b30c428be23650658f54e"
   integrity sha512-wGWFkDYbpSorD6f5slNWBwd4nkkdV9QcT3up4W4T3uSimN0xUJs4UFevXmsQNhpHIxI4h8AJn9lHJ04pm7dzyA==
 
+"@netcodejs/as-visitor@^0.0.1":
+  version "0.0.1"
+  resolved "https://registry.npmjs.org/@netcodejs/as-visitor/-/as-visitor-0.0.1.tgz#9c52b8c6eb8a9b267f6af2c4d9994809e8ce5079"
+  integrity sha512-TX/O2RkEzmKAK7zffszSay07scpw98qsMEg0hRxysZxDdK0t0B9K45QJRpIK3pM/O6WB8/fIo1/mqlfD4nO0yQ==
+  dependencies:
+    lodash.clonedeep "^4.5.0"
+    ts-mixer "^5.4.1"
+
 "@tsconfig/node10@^1.0.7":
   version "1.0.8"
   resolved "https://registry.npmjs.org/@tsconfig/node10/-/node10-1.0.8.tgz#c1e4e80d6f964fbecb3359c43bd48b40f7cadad9"
@@ -59,6 +67,11 @@ diff@^4.0.1:
   version "4.0.2"
   resolved "https://registry.npmjs.org/diff/-/diff-4.0.2.tgz#60f3aecb89d5fae520c11aa19efc2bb982aade7d"
   integrity sha512-58lmxKSA4BNyLz+HHMUzlOEpg09FV+ev6ZMe3vJihgdxzgcwZ8VoEEPmALCZG9LmqfVoNMMKpttIYTVG6uDY7A==
+
+lodash.clonedeep@^4.5.0:
+  version "4.5.0"
+  resolved "https://registry.npmjs.org/lodash.clonedeep/-/lodash.clonedeep-4.5.0.tgz#e23f3f9c4f8fbdde872529c1071857a086e5ccef"
+  integrity sha1-4j8/nE+Pvd6HJSnBBxhXoIblzO8=
 
 long@^4.0.0:
   version "4.0.0"

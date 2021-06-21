@@ -1,6 +1,7 @@
-import { TopLevelDecorator } from "@netcodejs/as-visitor/dist";
-import UniqueIdVisitor from "./unique-id";
+import { TopLevelDecorator } from "@netcodejs/as-visitor";
+import FamilyVisitor from "./family";
+import OverloadGenericVisitor from "./overload-generic";
 
-TopLevelDecorator.registerVisitor(new UniqueIdVisitor())
+TopLevelDecorator.registerVisitor(new FamilyVisitor(), new OverloadGenericVisitor())
 
 export = TopLevelDecorator

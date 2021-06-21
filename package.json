@@ -4,11 +4,13 @@
   "description": "Networking ecs framework.",
   "main": "index.js",
   "scripts": {
+    "tw": "set NODE_ENV=debug && yarn asbuild:untouched && yarn test",
+    "ttw": "set NODE_ENV=release && yarn asbuild:optimized && yarn test",
     "t": "export NODE_ENV=debug && yarn asbuild:untouched && yarn test",
     "tt": "export NODE_ENV=release && yarn asbuild:optimized && yarn test",
     "test": "node --experimental-wasi-unstable-preview1 --experimental-wasm-simd tests",
-    "asbuild:untouched": "asc assembly/index.ts --transform ./transform/top.ts,./transform/unique-id-of.ts --target debug --traceResolution",
-    "asbuild:optimized": "asc assembly/index.ts --transform ./transform/top.ts,./transform/unique-id-of.ts --target release --enable simd",
+    "asbuild:untouched": "asc assembly/index.ts --transform ./transform/top.ts,./transform/universal-visitor.ts --target debug --traceResolution",
+    "asbuild:optimized": "asc assembly/index.ts --transform ./transform/top.ts,./transform/universal-visitor.ts --target release --enable simd",
     "asbuild": "yarn asbuild:untouched && yarn asbuild:optimized"
   },
   "author": "LittleMoi",
@@ -17,6 +19,7 @@
     "@assemblyscript/loader": "^0.19.3"
   },
   "devDependencies": {
+    "@netcodejs/as-visitor": "^0.0.1",
     "assemblyscript": "^0.19.3",
     "prettier": "^2.3.1",
     "ts-mixer": "^5.4.1",

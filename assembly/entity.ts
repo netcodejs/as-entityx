@@ -8,7 +8,8 @@ export class Entity {
         return left.id == right.id && left.version == right.version;
     }
 
-    @inline 
+    // @ts-ignore: decorator
+    @inline()
     constructor(offset: usize = heap.alloc(sizeof<Entity>())) {
         return changetype<Entity>(offset);
     }
