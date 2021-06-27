@@ -1,0 +1,1 @@
+export const MAX_FAMILY_ID: u8 = 128;

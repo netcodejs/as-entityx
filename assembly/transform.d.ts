@@ -4,6 +4,6 @@ declare type Readonly<T> = {
     readonly [P in keyof T]: T[P];
 };
 declare function overloadgeneric(funcName: string): any;
-declare interface EntityManager {
-    foreach<T extends any[]>(cb: (...args: T) => void): void
-}
+// declare interface EntityManager {
+//     foreach<T extends any[]>(cb: (...args: T) => void): void
+// }

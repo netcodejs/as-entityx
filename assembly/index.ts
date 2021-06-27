@@ -59,7 +59,13 @@ class Vector<T> {
   }
 }
 
+function ttt<T>(): i32 {
+  return sizeof<T>() + 1;
+}
 
 export function add(a: i32, b: i32): i32 {
-    return familyof<Foo>();
+    // return familyof<Foo>();
+    console.log(`ttt: ${ttt<i8>()}`)
+    console.log(`ttt: ${ttt<i32>()}`)
+    return 1;
 }

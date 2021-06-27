@@ -9,8 +9,8 @@
     "t": "export NODE_ENV=debug && yarn asbuild:untouched && yarn test",
     "tt": "export NODE_ENV=release && yarn asbuild:optimized && yarn test",
     "test": "node --experimental-wasi-unstable-preview1 --experimental-wasm-simd tests",
-    "asbuild:untouched": "asc assembly/index.ts --transform ./transform/top.ts,./transform/universal-visitor.ts --target debug --traceResolution",
-    "asbuild:optimized": "asc assembly/index.ts --transform ./transform/top.ts,./transform/universal-visitor.ts --target release --enable simd",
+    "asbuild:untouched": "yarn asc assembly/index.ts --transform ./transform/index.ts --target debug --traceResolution",
+    "asbuild:optimized": "yarn asc assembly/index.ts --transform ./transform/index.ts --target release --enable simd",
     "asbuild": "yarn asbuild:untouched && yarn asbuild:optimized"
   },
   "author": "LittleMoi",
